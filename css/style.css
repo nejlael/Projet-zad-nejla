@@ -1,0 +1,379 @@
+* {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+  margin: 0 auto;
+  background-color: #d3c2af;
+}
+/*-------------------BARRE D'ANNONCE-----------------------*/
+.announcementBar {
+  color: white;
+  text-align: center;
+  padding: 10px;
+  background-color: black;
+}
+
+/*-------------------BARRE DE NAVIGATION-----------------------*/
+.navigation {
+  background-color: rgb(14, 14, 14);
+  width: 100%;
+  z-index: 1;
+}
+#logo {
+  margin: 10px 0px 0px 20px;
+  height: 50px;
+}
+.navigation #menu {
+  float: right;
+  margin: 30px 20px 0px 0px;
+}
+
+/*-------------------BANNER IMAGE-----------------------*/
+#banner {
+  width: 100%;
+  opacity: 70%;
+}
+
+/*-------------------LES POP UP-----------------------*/
+.popup {
+  background-color: #33312f;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0px 5px 5px;
+  float: left;
+  position: absolute;
+  visibility: hidden;
+  z-index: 2;
+}
+.popup form {
+  padding: 5px;
+  margin: auto;
+  text-align: center;
+  width: 80%;
+}
+.popup input {
+  background-color: #33312f;
+  border: none;
+  color: #bcad9b;
+  font-size: 20px;
+}
+.popup #search {
+  background-color: #33312f;
+  border: none;
+  border-bottom: solid 1px #bcad9b;
+  width: 90%;
+  color: #bcad9b;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+.popup ul {
+  display: inline-block;
+  margin: 30px;
+  color: #bcad9b;
+  padding: 0px;
+}
+.popup ul li {
+  list-style-type: none;
+  display: inline;
+  margin: 5px;
+}
+.popup ul li a {
+  color: #bcad9b;
+  text-decoration: none;
+}
+.popup ul li a:hover {
+  background-color: #33312f;
+  margin-bottom: 10px;
+  border-bottom: solid #bcad9b 1px;
+}
+
+/*-------------------CARTE FICHE PRODUITS-----------------------*/
+.card {
+  background-color: #bcad9b;
+  color: #f7f4ef;
+  box-shadow: 0px 0px 5px black;
+  display: inline-block;
+  margin: 5px;
+  height: 220px;
+  width: 180px;
+}
+.card img {
+  margin: 0px;
+  height: 180px;
+}
+.card img:hover {
+  opacity: 50%;
+  transition: 0.5s;
+}
+.card h4 {
+  font-weight: lighter;
+  margin: 5px;
+}
+.card h4 strong {
+  margin-left: 5px;
+}
+
+/*-------------------NOUVEAUTES PAGE D'ACCUEIL-----------------------*/
+.catalogue {
+  width: 100%;
+  text-align: center;
+}
+
+h2 {
+  color: #33312f;
+}
+
+/*-------------------PETIT TEXTE A PROPOS-----------------------*/
+.article {
+  background-color: #33312f;
+  color: #bcad9b;
+  margin: auto;
+  margin-top: 20px;
+  padding: 20px;
+}
+p {
+  text-align: justify;
+  padding-right: 20px;
+}
+p strong {
+  font-size: 30px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+/*------------CLASS INFO-------------*/
+.info-cols {
+  width: 100%;
+  text-align: center;
+}
+.info {
+  text-align: center;
+  margin: 20px;
+  background-color: #33312f;
+  color: white;
+  display: inline-block;
+  width: 300px;
+  padding: 20px;
+  box-shadow: 0 0 10px black;
+}
+.info img {
+  height: 75px;
+  text-align: center;
+}
+
+/*------------PAGE CATALOGUE-------------*/
+
+.categories {
+  text-align: center;
+  background-color: #bcad9b;
+  box-shadow: 0px 0px 5px;
+  padding: 0px;
+  list-style-type: none;
+  margin: 0px;
+  margin-bottom: 15px;
+  padding: 5px 0px 5px 0px;
+}
+.categories ul li {
+  width: 50px;
+  display: inline-block;
+  margin: 5px;
+}
+
+/*------------PAGE PRODUIT-------------*/
+.produit {
+  background-color: #d3c2af;
+  height: 400px;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 850px;
+  min-width: 850px;
+  margin: auto;
+}
+.description {
+  width: 400px;
+  float: right;
+  margin-right: 20px;
+}
+.produit p {
+  text-align: justify;
+  padding-right: 20px;
+}
+.produit h1 {
+  font-weight: lighter;
+}
+.produit button {
+  padding: 10px;
+  border-radius: 50px;
+  border: none;
+  margin: 10px 0px 10px 0px;
+  width: 250px;
+  color: #d3c2af;
+  font-size: large;
+}
+#acheter {
+  background-color: #bcad9b;
+  color: white;
+}
+
+/*------------PAGE PANIER-------------*/
+.panier {
+  margin-top: 0px;
+  width: 100%;
+  text-align: center;
+}
+.empty {
+  margin: 100px;
+  color: #bcad9b;
+}
+
+/*------------FOOTER-------------*/
+footer {
+  background-color: #33312f;
+  height: auto;
+  margin: 0 auto;
+  margin-top: -150px;
+  padding-top: 200px;
+  color: #d3c2af;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+form {
+  background-color: #33312f;
+  margin: auto;
+  padding: 20px;
+  width: 80%;
+  font-size: 18px;
+  box-shadow: 0px 0px 5px black;
+}
+
+input {
+  margin: 10px 0;
+  border: none;
+  padding: 10px 0px 10px 0px;
+  width: 300px;
+  color: #33312f;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.submit {
+  font-weight: bold;
+  font-size: large;
+  background-color: #d3c2af;
+  text-transform: uppercase;
+}
+.submit:hover {
+  background-color: #ffebd5;
+  transition: 0.5s;
+}
+
+/*------------------------PAGE INSCRIPTION-------------------------*/
+
+.login {
+  margin: 0px;
+  width: 100%;
+  text-align: center;
+  background-color: #33312f;
+}
+#btnconnexion,
+#btninscription {
+  margin: 10px;
+  font-weight: bold;
+  font-size: large;
+  text-transform: uppercase;
+  background-color: #33312f;
+  color: #bcad9b;
+  border: none;
+  padding: 10px;
+}
+#btnconnexion:hover,
+#btninscription:hover {
+  background-color: #bcad9b;
+  color: #33312f;
+  transition: 0.5s;
+}
+.switch {
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+}
+.switch form {
+  background-color: #33312f;
+  margin: auto;
+  width: 350px;
+  font-size: 18px;
+  box-shadow: 0px 0px 5px black;
+}
+
+/*------------------------PAGE ADMIN-------------------------*/
+
+.admin {
+  width: 100%;
+  background-color: #33312f;
+  text-align: center;
+  margin-top: -10px;
+  padding-top: 20px;
+}
+.admin h3 {
+  color: #bcad9b;
+  text-align: left;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.errors {
+  color: red;
+}
+.title-login {
+  color: white;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+}
+.grid-item {
+  padding: 20px;
+  font-size: 30px;
+}
+
+.alert-success {
+  border: 1px solid green;
+  background-color: #dff0d8;
+  color: green;
+}
+
+.alert-error {
+    border: 1px solid red;
+    background-color: #f2dede;
+    color: red;
+  }
+
+/*****Table*****/
+#table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#table td, #table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#table tr{background-color: #f2f2f2;}
+
+#table tr:hover {background-color: #ddd;}
+
+#table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #33312f;
+  color: white;
+}
+
+.select-category{
+  width: 70%;
+}
+/*--------------------------------------LES MEDIA QUERIES------------------------------------------*/
