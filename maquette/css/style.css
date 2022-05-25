@@ -1,0 +1,330 @@
+ *{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+body{
+    margin: 0 auto;
+    background-color: #D3C2AF;
+    
+}
+/*-------------------BARRE D'ANNONCE-----------------------*/
+.announcementBar{
+    color: white;
+    text-align: center;
+    padding: 10px;
+    background-color: black;
+}
+
+/*-------------------BARRE DE NAVIGATION-----------------------*/
+.navigation{
+    background-color: rgb(14, 14, 14);
+    width: 100%;
+    z-index: 1;
+    
+}
+#logo{
+    margin: 10px 0px 0px 20px;
+    height: 50px;
+}
+.navigation #menu{
+    float: right;
+    margin: 30px 20px 0px 0px;
+}
+
+/*-------------------BANNER IMAGE-----------------------*/
+#banner{
+    width: 100%;
+    opacity: 70%;
+}
+
+/*-------------------LES POP UP-----------------------*/
+.popup{
+    background-color:#33312F;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0px 5px 5px;
+    float: left;
+    position:absolute;
+    visibility: hidden;
+    z-index: 2;
+}
+.popup form{
+    padding: 5px;
+    margin: auto;
+    text-align: center;
+    width: 80%;
+}
+.popup input{
+    background-color: #33312F;
+    border:none;
+    color: #BCAD9B;
+    font-size: 20px;
+}
+.popup #search{
+    background-color:#33312F;
+    border: none;
+    border-bottom:solid 1px #BCAD9B;
+    width: 90%;
+    color:#BCAD9B;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+.popup ul{
+    display: inline-block;
+    margin: 30px;
+    color: #BCAD9B;
+    padding: 0px;
+}
+.popup ul li {
+    list-style-type: none;
+    display: inline;
+    margin: 5px;
+}
+.popup ul li a{
+    color: #BCAD9B;
+    text-decoration: none;
+}
+.popup ul li a:hover{
+    background-color: #33312F;
+    margin-bottom: 10px;
+    border-bottom: solid #BCAD9B 1px;
+
+}
+
+/*-------------------CARTE FICHE PRODUITS-----------------------*/
+.card{
+    background-color:#BCAD9B;
+    color: #F7F4EF;
+    box-shadow: 0px 0px 5px black;
+    display: inline-block;
+    margin: 5px;
+    height: 220px;
+    width: 180px;
+}
+ .card img {
+     margin: 0px; 
+     height: 180px;  
+ }
+ .card img:hover{
+     opacity: 50%;
+     transition: 0.5s;
+ }
+ .card h4{
+     font-weight: lighter;
+     margin: 5px;
+ }
+ .card h4 strong{
+     margin-left: 5px;
+ }
+
+ /*-------------------NOUVEAUTES PAGE D'ACCUEIL-----------------------*/
+.catalogue{
+    width: 100%;
+    text-align: center;
+}
+
+h2{
+    color: #33312F;
+}
+
+/*-------------------PETIT TEXTE A PROPOS-----------------------*/
+.article{
+    background-color: #33312F;
+    color:#BCAD9B;
+    margin: auto;
+    margin-top: 20px;
+    padding: 20px;
+    
+}
+p{
+    text-align: justify;
+    padding-right: 20px;
+    
+}
+p strong{
+    font-size: 30px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+/*------------CLASS INFO-------------*/
+.info-cols{
+    width: 100%;
+    text-align: center;
+}
+.info{
+    text-align: center;
+    margin: 20px;
+    background-color: #33312F;
+    color: white;
+    display:  inline-block;
+    width: 300px;
+    padding: 20px;
+    box-shadow: 0 0 10px black;
+}
+.info img{
+    height: 75px;
+    text-align: center;
+}
+
+/*------------PAGE CATALOGUE-------------*/
+
+.categories{
+    text-align: center;
+    background-color: #BCAD9B;
+    box-shadow: 0px 0px 5px;
+    padding: 0px;
+    list-style-type: none;
+    margin: 0px;
+    margin-bottom: 15px;
+    padding: 5px 0px 5px 0px;
+}
+.categories ul li{
+    width: 50px;
+    display: inline-block;
+    margin: 5px;
+}
+
+
+/*------------PAGE PRODUIT-------------*/
+.produit{
+    background-color: #D3C2AF;
+    height: 400px;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 850px;
+    min-width: 850px;
+    margin: auto;
+}
+.description{
+    width: 400px;
+    float: right;
+    margin-right: 20px;
+}
+.produit p{
+    text-align: justify;
+    padding-right: 20px;
+    
+}
+.produit h1{
+    font-weight: lighter;
+}
+.produit button{
+    padding: 10px;
+    border-radius: 50px;
+    border: none;
+    margin: 10px 0px 10px 0px;
+    width: 250px;
+    color: #D3C2AF;
+    font-size: large;
+}
+#acheter{
+    background-color: #BCAD9B;
+    color: white;
+}
+
+/*------------PAGE PANIER-------------*/
+.panier{
+    margin-top: 0px;
+    width: 100%;
+    text-align: center;
+
+}
+.empty{
+    margin: 100px;
+    color: #BCAD9B;
+}
+
+/*------------FOOTER-------------*/
+footer{
+    background-color: #33312F;
+    height: auto;
+    margin: 0 auto;
+    margin-top: -150px;
+    padding-top: 200px;
+    color: #D3C2AF;
+    text-align: center;
+    padding-bottom: 50px;
+}
+input{
+    margin: 10px;
+    border: none;
+    padding: 10px 0px 10px 0px ;
+    width: 300px;
+    color: #33312F;
+    padding: 10px;
+}
+form{
+    background-color: #33312F;
+    margin: auto;
+    padding: 20px;
+    width: 80%;
+    font-size: 18px;
+    box-shadow: 0px 0px 5px black;
+}
+.submit{
+     font-weight: bold;
+     font-size: large;
+     background-color: #D3C2AF;
+     text-transform: uppercase;
+     padding-left: 20px;
+ }
+.submit:hover{
+     background-color:#ffebd5;
+     transition: 0.5s;
+ }
+
+/*------------------------PAGE INSCRIPTION-------------------------*/
+
+.login{
+    margin: 0px;
+    width: 100%;
+    text-align: center;
+    background-color: #33312F;
+}
+#btnconnexion, #btninscription{
+    margin: 10px;
+    font-weight: bold;
+    font-size: large;
+    text-transform: uppercase;
+    background-color: #33312F;
+    color: #BCAD9B;
+    border: none;
+    padding: 10px;
+}
+#btnconnexion:hover, #btninscription:hover{
+    background-color:#BCAD9B;
+    color: #33312F;
+    transition: 0.5s;
+}
+.switch{
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+}
+.switch form{
+    background-color: #33312F;
+    margin: auto;
+    width: 350px;
+    font-size: 18px;
+    box-shadow: 0px 0px 5px black;
+}
+
+/*------------------------PAGE ADMIN-------------------------*/
+
+.admin{
+    width: 100%;
+    background-color: #33312F;
+    text-align: center;
+    margin-top: -10px;
+    padding-top: 20px;
+}
+.admin h3{
+    color: #BCAD9B;
+    text-align: left;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+
+/*--------------------------------------LES MEDIA QUERIES------------------------------------------*/
