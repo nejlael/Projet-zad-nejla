@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: May 24, 2022 at 05:31 PM
+-- Generation Time: May 26, 2022 at 12:14 PM
 -- Server version: 10.4.10-MariaDB
 -- PHP Version: 7.3.12
 
@@ -19,8 +19,22 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `e-shop-db`
+-- Database: `emerald_boutique`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `baskets`
+--
+
+DROP TABLE IF EXISTS `baskets`;
+CREATE TABLE IF NOT EXISTS `baskets` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) NOT NULL,
+  `product_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=94 DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -34,17 +48,8 @@ CREATE TABLE IF NOT EXISTS `categories` (
   `name` varchar(200) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `name` (`name`)
-) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `categories`
---
-
-INSERT INTO `categories` (`id`, `name`) VALUES
-(6, 'DSD'),
-(5, 'Test'),
-(4, 'Bougie'),
-(7, 'aaaa');
 
 -- --------------------------------------------------------
 
@@ -58,8 +63,8 @@ CREATE TABLE IF NOT EXISTS `products` (
   `name` varchar(200) NOT NULL,
   `cat_id` int(11) NOT NULL,
   `price` float NOT NULL,
-  `description` varchar(200) NOT NULL,
-  `image` longblob NOT NULL,
+  `description` text NOT NULL,
+  `image` longtext NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `name` (`name`)
-) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=38 DEFAULT CHARSET=latin1;
