@@ -8,7 +8,7 @@ class Db{
     {
         try {
 			//permet de charger la base de donnée
-            $this->_db = new PDO('mysql:host=localhost;dbname=zad_emerald;port=3316', 'zad_emerald', 'zad_emerald');
+            $this->_db = new PDO('mysql:host=localhost;dbname=emerald_boutique;port=3306', 'zad_emerald', 'zad_emerald');
             var_dump($this->_db);
             $this->_db->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 			$this->_db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_OBJ);
