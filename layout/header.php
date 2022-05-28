@@ -32,7 +32,7 @@
                     <?php if (isLogged()) { ?>
                     <li><a href="baskets.php">Voir mon panier</a></li>
                     <?php } ?>
-                    <?php if(isAdmin()) {?>
+                    <?php if(isLogged()) {?>
                     <li><a href="categories.php">Les catégories</a></li>
                     <li><a href="products.php">Les produits</a></li>
                     <li><a href="users.php">Les utilisateurs</a></li>

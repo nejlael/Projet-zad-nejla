@@ -2,7 +2,7 @@
     require 'backend/config/db.php';
     include 'layout/header.php';
     
-    if (!isAdmin()) {
+    if (!isLogged()) {
         header('location:login.php');
     }
     require 'backend/models/user.class.php';
