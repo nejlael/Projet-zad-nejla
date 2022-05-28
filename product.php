@@ -1,4 +1,3 @@
-
 <?php
     require 'backend/config/db.php';
     include 'layout/header.php';
