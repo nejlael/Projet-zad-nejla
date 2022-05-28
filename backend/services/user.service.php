@@ -31,10 +31,23 @@ class UserService {
 		$result = $this->db->query($query); 
 		$row = $result->fetch();
 		if ($result->rowcount()!=0) {
-			return new User($row->id,$row->firstname,$row->lastname,$row->email,null, $row->is_admin) ;
+			return new User($row->id,$row->firstname,$row->lastname,$row->email,null, $row->is_admin);
 		}
 		return null;
 	}
+
+    public function getUsers() {
+		$query = 'SELECT * FROM users ORDER BY id';
+		$result = $this->db->query($query); 
+		$array = array();
+		if ($result->rowcount()!=0) {
+			while ($row = $result->fetch()) {		
+				$array[] = new User($row->id,$row->firstname,$row->lastname,$row->email,null, $row->is_admin);
+			}
+		}	
+		return $array;
+	}
+
     
 
 }
