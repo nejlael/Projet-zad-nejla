@@ -55,8 +55,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 }
 
 ?>
-<footer class="grid-container" style="margin-top:1em;">
-    <form class="contact grid-item"  method="post">
+<footer>
+    <form class="contact"  method="post">
         <?php if ($array['messageSuccess']) { ?>
                 <div class="alert-success">
                     <?= $array['messageSuccess'] ?>
@@ -79,7 +79,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         <br>
         <input type="submit" name="contactSubmit" class="submit" value="Envoyer">
     </form>
-    <div class="socialmedia grid-item">
+    <div class="socialmedia">
         <h3>
         Suivez nous sur les reseaux !</h1>
         <img src="./images/icones/instagram.png" alt="IG" height="35px">
@@ -87,7 +87,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         <img src="./images/icones/twitter.png" alt="TW" height="35px">
         <img src="./images/icones/tiktok.png" alt="TT" height="35px">
     </div>
-    <div class="payements grid-item">
+    <div class="payements">
         <h3>
         Nous acceptons :</h1>
         <img src="./images/icones/bancontact.png" alt="bancontact" height="75px">

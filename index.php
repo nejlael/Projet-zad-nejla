@@ -10,21 +10,56 @@
 <main class="home">
     <!---------------------BANNER IMAGE--------------------------------->
     <img id="banner" src="./images/banner.png">
+
+
     <!---------------------NOUVEAUX PRODUITS--------------------------------->
-    <div class="catalogue">
-        <h2>Nouveautés :</h2>
+    <div class="nouveautes">
+
+        <h2 class="title">THE LATEST</h2>
+
         <?php for ($i=0;$i<count($products);$i++) { ?>
         <a href="product.php?id=<?= $products[$i]->id() ?>">
+
             <div class="card">
                 <img src="<?= $products[$i]->image() ?>" alt="produit" >
-                <h4><?= $products[$i]->name() ?> <strong><?= $products[$i]->price() ?> €</strong></h4>
+                <h4>
+                    <?= $products[$i]->name() ?>
+                    <br>
+                    <strong><?= $products[$i]->price() ?> €</strong>
+                </h4>
             </div>
+
         </a>
         <?php } ?>
     </div>
+
+    <!---------------------MOST WANTED LINK--------------------------------->
+
+    <div class="most-wanted">
+        <div id="most-wanted-link">
+            <div id="most">
+                The most
+            </div>
+            <div id="wanted">
+                WANTED
+            </div>
+            <img src="" alt="">
+            <a href="catalog.php">SHOP NOW</a>
+        </div>
+    </div>
+
+
+
     <!---------------------ARTICLE--------------------------------->
     <div class="article">
-        <p> <strong>Aussi bien dehors que dedans</strong><br><br>ipsum dolor sit amet consectetur adipisicing elit. Quidem eos nesciunt cupiditate! Saepe similique sed pariatur quae sit, atque cumque reiciendis? Molestias, dolorem. Minus odio dolore, omnis impedit odit ad. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi, vel et necessitatibus, iste cum omnis ad eligendi minus voluptatem, repellendus facere? Autem libero aspernatur placeat nostrum dolore recusandae rem veritatis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quam minus in nobis reprehenderit rerum, eum ut nemo perspiciatis fugiat qui iusto deserunt quod quas. Sapiente, temporibus? Sunt, a nobis.</p>
+        <img src="./images/image-article.jpg">
+        <div class="text">
+            <h2 class="title">Aussi bien dehors que dedans</h2>
+            </br>
+            <p>
+            ipsum dolor sit amet consectetur adipisicing elit. Quidem eos nesciunt cupiditate! Saepe similique sed pariatur quae sit, atque cumque reiciendis? Molestias, dolorem. Minus odio dolore, omnis impedit odit ad. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi, vel et necessitatibus, iste cum omnis ad eligendi minus voluptatem, repellendus facere? Autem libero aspernatur placeat nostrum dolore recusandae rem veritatis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quam minus in nobis reprehenderit rerum, eum ut nemo perspiciatis fugiat qui iusto deserunt quod quas. Sapiente, temporibus? Sunt, a nobis.
+            </p>
+        </div>
     </div>
     <!---------------------INFO_3COLS--------------------------------->
     <div class="info-cols">

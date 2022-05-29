@@ -14,7 +14,7 @@ class Db{
         try {
 			//permet de charger la base de donnée
             $this->_db = new PDO('mysql:host=localhost;dbname=emerald_boutique;port=3306', 'root', '');
-            var_dump($this->_db);
+            //var_dump($this->_db);
             $this->_db->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 			$this->_db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_OBJ);
       } 

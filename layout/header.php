@@ -15,10 +15,10 @@
     </head>
     <body>
         <header>
-            <!-------------------barre d'annonce----------------------->
+            <!-------------------barre d'annonce---------------------
             <div class="announcementBar">
                 Bienvenue dans notre e-shop
-            </div>
+            </div>-->
             <!-------------------barre de navigation----------------------->
             <div class="navigation">
                 <a href="index.php" ><img  id="logo" src="./images/icones/logo_emerald.png" alt="logo" height="60px"></a>

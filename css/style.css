@@ -17,11 +17,19 @@
 
 * {
   font-family: 'BELL';
+}
+.title{
+  font-family: 'the Seasons';
+  width: 100%;
+  text-align: center;
   font-size: 20px;
+}
+.text{
+  font-family: 'BELL';
+  font-size: 15px;
 }
 body {
   margin: 0 auto;
-  background-color: #d3c2af;
   overflow-x: hidden;
 }
 /*-------------------BARRE D'ANNONCE-----------------------*/
@@ -106,18 +114,42 @@ body {
   border-bottom: solid #bcad9b 1px;
 }
 
-/*-------------------CARTE FICHE PRODUITS-----------------------*/
-.card {
-  background-color: #bcad9b;
-  color: #f7f4ef;
+/*-------------------LES FORMULAIRES-----------------------*/
+input {
+  margin: 10px;
+  border: none;
+  padding: 10px 0px 10px 0px;
+  width: 300px;
+  color: #33312f;
+  padding: 10px;
+}
+form {
+  background-color: #33312f;
+  font-size: 18px;
   box-shadow: 0px 0px 5px black;
+}
+.submit {
+  font-weight: bold;
+  font-size: large;
+  background-color: #d3c2af;
+  text-transform: uppercase;
+  padding-left: 20px;
+}
+.submit:hover {
+  background-color: #ffebd5;
+  transition: 0.5s;
+}
+
+/*-------------------LES CARTES PRODUIT-----------------------*/
+.card {
+  color:#33312f;
   display: inline-block;
-  margin: 1em;
+  margin: 2px;
   height: 50%;
 }
 .card img {
   margin: 0px;
-  height: 10em;
+  height: 250px;
 }
 .card img:hover {
   opacity: 50%;
@@ -125,75 +157,126 @@ body {
 }
 .card h4 {
   font-weight: lighter;
-  margin: 5px;
+  text-align: left;
+  margin: 0px;
+  background-color: #ede9e4;
+  font-family: 'The Seasons';
+  padding: 5px 10px;
 }
 .card h4 strong {
-  margin-left: 5px;
 }
 
-/*-------------------NOUVEAUTES PAGE D'ACCUEIL-----------------------*/
-.catalogue {
-  width: 100%;
-}
-
-h2 {
-  color: #33312f;
-}
-
-/*-------------------PETIT TEXTE A PROPOS-----------------------*/
-.article {
-  background-color: #33312f;
-  color: #bcad9b;
-  margin: auto;
-  margin-top: 20px;
-  padding: 20px;
-}
-p {
-  text-align: justify;
-  padding-right: 20px;
-}
-p strong {
-  font-size: 30px;
-  margin-bottom: 50px;
+/*-------------------NOUVEAUTES-----------------------*/
+.nouveautes{
+  
+  width: fit-content;
+  margin: 0 auto;
   text-align: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+.nouveautes .title{
+  background-color: #ede9e4;
+  padding: 10px 0px 10px 0px;
 }
 
-/*------------CLASS INFO-------------*/
+/*-------------------MOST WANTED-----------------------*/
+
+.most-wanted{
+  background-color: black;
+  width: 100%;
+  color: white;
+  font-size: 50px;
+  margin: 20px 0px;
+  margin-top: 100px;
+
+  
+  
+}
+#most-wanted-link{
+  padding: 200px 0px;
+  margin-left: 10%;
+}
+#most{
+  font-family: 'Autography';
+}
+#wanted {
+  font-family: 'The Seasons';
+  margin-top: -50px;
+  margin-left: 55px;
+}
+
+#most-wanted-link a {
+  color: white;
+  text-decoration: none;
+  border: solid thin white;
+  padding: 10px 30px;
+  font-size: 10px;
+  margin-left: 50px;
+
+}
+
+
+/*-------------------ARTICLE-----------------------*/
+.article {
+  background-color: #ede9e4;
+  color: black;
+  width: fit-content;
+  display: inline-block;
+  height: 500px;
+  margin: 0 auto;
+}
+.article .text{
+  width: 40%;
+  margin: 0 auto;
+  float: left;
+  padding-left: 40px;
+
+}
+.article p {
+  text-align: justify;
+  padding: 10px;
+  margin: 0 auto;
+}
+.article img{
+  float: left;
+  height: 100%;
+  margin: 0 auto;
+}
+
+ 
+
+
+/*------------LES BLOCS D'INFOS-------------*/
 .info-cols {
   width: 100%;
   text-align: center;
 }
+
 .info {
   text-align: center;
   margin: 20px;
   background-color: #33312f;
   color: white;
   display: inline-block;
-  width: 300px;
+  width: 200px;
   padding: 20px;
   box-shadow: 0 0 10px black;
 }
 .info img {
-  height: 75px;
+  height: 50px;
   text-align: center;
 }
 
 /*------------PAGE CATALOGUE-------------*/
 
-.categories {
+.categories-sidebar{
   text-align: center;
-  background-color: #bcad9b;
+  background-color: black;
   box-shadow: 0px 0px 5px;
-  padding: 0px;
-  list-style-type: none;
-  margin: 0px;
-  margin-bottom: 15px;
-  padding: 5px 0px 5px 0px;
-}
-.categories ul li {
-  width: 50px;
-  display: inline-block;
-  margin: 5px;
+  width: 100px;
+  float: left;
+  
 }
 
 /*------------PAGE PRODUIT-------------*/
@@ -314,7 +397,7 @@ form {
   box-shadow: 0px 0px 5px black;
 }
 
-/*------------------------PAGE ADMIN-------------------------*/
+/*------------------------PAGE ADMIN-------------------------
 
 .admin {
   width: 100%;
@@ -358,7 +441,7 @@ form {
   color: red;
 }
 
-/*****Table*****/
+-----------------------------------Tables-----------------------------------------
 #table {
   border-collapse: collapse;
   width: 100%;
@@ -441,4 +524,5 @@ form {
 .editBtn{
   color: black;
   text-decoration: none;
-}
+} 
+*/

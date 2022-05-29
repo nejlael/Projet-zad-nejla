@@ -21,14 +21,18 @@
     
     ?>
     <main>
-    <div class="sidebar">
-        <a href="index.php" ><img  id="logo" src="./images/icones/logo_emerald.png" alt="logo" height="60px"></a>
+
+    <!----------------------------------MENU DES CATEGORIES------------------------------------->
+
+    <div class="categories-sidebar">
         <h2>Catégories</h2>
         <p><a href="catalog.php">Tout afficher</a></p>
         <?php for ($i=0;$i<count($categories);$i++) { ?>
         <p><a href="catalog.php?category_id=<?= $categories[$i]->id() ?>"><?= $categories[$i]->name() ?></a></p>
         <?php } ?>
     </div>
+
+    <!-----------------------XTE SI PAS DE PRODUITS DANS LA CATEGORIE--------------------------->
     <div class="catalogue body-text">
         <?php if (count($products) == 0) { ?>
         <div class="empty" >
@@ -37,6 +41,8 @@
             </h2>
         </div>
         <?php } ?>
+
+    <!-----------------------AFFICHAGE DES PRODUITS DANS LA CATEGORIE--------------------------->
         <?php for ($i=0;$i<count($products);$i++) { ?>
         <a href="product.php?id=<?= $products[$i]->id() ?>">
             <div class="card">
