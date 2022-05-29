@@ -1,12 +1,23 @@
 @font-face {
-  font-family: "Open Sans";
-  src: url("../fonts/The\ Seasons\ Regular.ttf") format("ttf"),
-         url("../fonts/Autography.otf") format("otf"),
-         url("../fonts/BELL.TTF") format("ttf");
+  font-family: "The Seasons";
+  src: url("../fonts/The\ Seasons\ Regular.ttf") format("truetype");
+ }
+ @font-face {
+  font-family: "Autography";
+  src: url("../fonts/Autography.otf") format("opentype");
+ }
+ @font-face {
+  font-family: "BELL";
+  src: url("../fonts/BELL.TTF") format("truetype");
+ }
+ @font-face {
+  font-family: "Book Antiqua";
+  src: url("../fonts/BKANT.TTF") format("truetype");
  }
 
 * {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Book Antiqua';
+  font-size: 20px;
 }
 body {
   margin: 0 auto;
