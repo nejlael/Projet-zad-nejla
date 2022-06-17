@@ -22,13 +22,18 @@
   font-family: 'the Seasons';
   width: 100%;
   text-align: center;
-  font-size: 20px;
+  font-size: 1,5em;
 }
 .text{
   font-family: 'BELL';
-  font-size: 15px;
+  font-size: 1em;
 }
 body {
+  background-color: #bcad9b;
+  background-image:url(../images/background.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size:cover;
   margin: 0 auto;
   overflow-x: hidden;
 }
@@ -36,7 +41,7 @@ body {
 .announcementBar {
   color: white;
   text-align: center;
-  padding: 10px;
+  padding: 1em;
   background-color: black;
 }
 
@@ -44,21 +49,31 @@ body {
 .navigation {
   background-color: rgb(14, 14, 14);
   width: 100%;
+  height: 5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   z-index: 1;
 }
 #logo {
-  margin: 10px 0px 0px 20px;
   height: 50px;
 }
 .navigation #menu {
-  float: right;
-  margin: 30px 20px 0px 0px;
 }
 
 /*-------------------BANNER IMAGE-----------------------*/
-#banner {
+.banner {
   width: 100%;
-  opacity: 70%;
+  text-align: center;
+}
+.banner h1{
+  text-transform: uppercase;
+}
+.banner h2{
+  font-family: 'Autography';
+  margin-left: 20%;
+  color: white;
+
 }
 
 /*-------------------LES POP UP-----------------------*/
@@ -145,11 +160,11 @@ form {
   color:#33312f;
   display: inline-block;
   margin: 2px;
-  height: 50%;
+  height: 20em;
 }
 .card img {
   margin: 0px;
-  height: 250px;
+  height: 80%;
 }
 .card img:hover {
   opacity: 50%;
@@ -172,8 +187,8 @@ form {
   width: fit-content;
   margin: 0 auto;
   text-align: center;
-  margin-top: 100px;
-  margin-bottom: 100px;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 .nouveautes .title{
   background-color: #ede9e4;
@@ -189,13 +204,16 @@ form {
   font-size: 50px;
   margin: 20px 0px;
   margin-top: 100px;
+  height: 500px;
+  display: inline-block;
 
-  
+  display: flex;
+  justify-content: space-around;
+  align-items:center;
   
 }
-#most-wanted-link{
-  padding: 200px 0px;
-  margin-left: 10%;
+#most-wanted-link *{
+  display:block;
 }
 #most{
   font-family: 'Autography';
@@ -215,33 +233,31 @@ form {
   margin-left: 50px;
 
 }
+.most-wanted img{
+  height: 100%;
+}
 
 
 /*-------------------ARTICLE-----------------------*/
 .article {
-  background-color: #ede9e4;
+  background-color: #ede9e481;
   color: black;
-  width: fit-content;
-  display: inline-block;
-  height: 500px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 10em;
   margin: 0 auto;
 }
 .article .text{
   width: 40%;
   margin: 0 auto;
-  float: left;
-  padding-left: 40px;
 
 }
 .article p {
   text-align: justify;
-  padding: 10px;
-  margin: 0 auto;
 }
 .article img{
-  float: left;
-  height: 100%;
-  margin: 0 auto;
+  height: 80%;
 }
 
  

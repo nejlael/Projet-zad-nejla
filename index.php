@@ -9,7 +9,11 @@
      ?>
 <main class="home">
     <!---------------------BANNER IMAGE--------------------------------->
-    <img id="banner" src="./images/banner.png">
+    <div class="banner">
+        <img src="./images/banner.png">
+
+        <A> shop now </A>
+    </div>
 
 
     <!---------------------NOUVEAUX PRODUITS--------------------------------->
@@ -18,17 +22,15 @@
         <h2 class="title">THE LATEST</h2>
 
         <?php for ($i=0;$i<count($products);$i++) { ?>
-        <a href="product.php?id=<?= $products[$i]->id() ?>">
-
-            <div class="card">
+        <a class="card" href="product.php?id=<?= $products[$i]->id() ?>">
+     
                 <img src="<?= $products[$i]->image() ?>" alt="produit" >
                 <h4>
                     <?= $products[$i]->name() ?>
                     <br>
-                    <strong><?= $products[$i]->price() ?> €</strong>
+                    <strong><?= $products[$i]->price() ?> &euro;</strong>
                 </h4>
-            </div>
-
+         
         </a>
         <?php } ?>
     </div>
@@ -37,22 +39,18 @@
 
     <div class="most-wanted">
         <div id="most-wanted-link">
-            <div id="most">
-                The most
-            </div>
-            <div id="wanted">
-                WANTED
-            </div>
-            <img src="" alt="">
+            <span id="most">The most</span>
+            <span id="wanted">WANTED</span>
             <a href="catalog.php">SHOP NOW</a>
         </div>
+        <img src="./images/most-wanted.png" alt="" height="400px">
     </div>
 
 
 
     <!---------------------ARTICLE--------------------------------->
     <div class="article">
-        <img src="./images/image-article.jpg">
+        <img src="./images/article.png">
         <div class="text">
             <h2 class="title">Aussi bien dehors que dedans</h2>
             </br>
