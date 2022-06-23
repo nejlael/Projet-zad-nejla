@@ -1,20 +1,4 @@
-<?php 
-    require 'backend/models/category.class.php';
-    require 'backend/services/category.service.php';
-    
-    $productService = new ProductService();
-    
-    $categoryService = new CategoryService();
-    $categories = $categoryService->getCategories();
-    
-    
-    if(empty($_GET['category_id'])){
-        $products = $productService->getProducts();
-    }else{
-        $products = $productService->getProductsByCategory($_GET['category_id']);
-    }
-    
-    ?>
+
 <footer>
 <span class="get-in-touch">
     <p>Let's get <br><strong>in touch</strong></p>

@@ -7,6 +7,16 @@
     require 'backend/models/user.class.php';
     require 'backend/services/user.service.php';
     
+    require 'backend/models/category.class.php';
+    require 'backend/services/category.service.php';
+    
+    $categoryService = new CategoryService();
+    $categories = $categoryService->getCategories();
+    
+   
+    
+    
+    
     $array = [
         'firstnameError' => '',
         'lastnameError' => '',

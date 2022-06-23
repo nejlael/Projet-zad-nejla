@@ -294,7 +294,7 @@ form {
 }
 /*------------PAGE CATALOGUE-------------*/
 .catalog{
-  border-top: solid black 5px;
+  border-top: solid black 10px;
   display: flex;
   justify-content: space-between;
 }
@@ -330,7 +330,7 @@ form {
   background-color:#0000004f;
   width: 100%;
   display:grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
 }
 /*------------PAGE PRODUIT-------------*/
 .produit {

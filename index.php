@@ -3,6 +3,23 @@
     require 'backend/config/db.php';
     require 'backend/models/product.class.php';
     require 'backend/services/product.service.php';
+
+    require 'backend/models/category.class.php';
+    require 'backend/services/category.service.php';
+    
+    $productService = new ProductService();
+    
+    $categoryService = new CategoryService();
+    $categories = $categoryService->getCategories();
+    
+    
+    if(empty($_GET['category_id'])){
+        $products = $productService->getProducts();
+    }else{
+        $products = $productService->getProductsByCategory($_GET['category_id']);
+    }
+    
+
     
     $productService = new ProductService();
     $products = $productService->getLastProducts(4);

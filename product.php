@@ -5,6 +5,14 @@
     require 'backend/services/product.service.php';
     require 'backend/models/basket.class.php';
     require 'backend/services/basket.service.php';
+
+    require 'backend/models/category.class.php';
+    require 'backend/services/category.service.php';
+    
+    $categoryService = new CategoryService();
+    $categories = $categoryService->getCategories();
+    
+
     if (!isLogged()) {
         header('location:login.php');
     }
