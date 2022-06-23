@@ -108,9 +108,9 @@
     
     ?>
 <main class="login">
-    <div class="grid-container">
-        <div class="grid-item">
-            <h3 class="title-login">Connexion</h3>
+    <div class="switch"><button id="btninscription">Inscription</button>
+    <button id="btnconnexion">Connexion</button>
+        <div class="connexion">
             <form method="post">
                 <?php
                     if($array['isLogin'] && $array['messageSuccess']){ ?>
@@ -133,8 +133,9 @@
                 <input type="submit" name="submitLogin" class="submit" value="Se connecter">
             </form>
         </div>
-        <div class="grid-item">
-            <h3 class="title-login">Inscription</h3>
+        
+        <div class="inscription">
+            
             <form method="post" >
                 <?php
                     if($array['isRegister'] && $array['messageSuccess']){ ?>

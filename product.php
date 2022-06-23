@@ -13,6 +13,9 @@
         header('location:products.php');
     }
     $productService = new ProductService();
+    $products = $productService->getLastProducts(4);
+
+    $productService = new ProductService();
     $product = $productService->getProduct($productId);
     $array = [
         'messageSuccess' => '',
@@ -33,32 +36,46 @@
     }
     ?>
 <div class="produit">
-    <?php
-        if($array['isBasket'] && $array['messageSuccess']){ ?>
-    <div class="alert-success">
-        <?= $array['messageSuccess'] ?>
-    </div>
-    <?php } ?>
-    <?php
-        if($array['isBasket'] && $array['messageError']){ ?>
-    <div class="alert-error">
-        <?= $array['messageError'] ?>
-    </div>
-    <?php } ?>
-    <br/>
     <img src="<?= $product->image() ?>" alt="Image du produit" height="200px">
-    <div class="description">
-        <h1><?= $product->name() ?></h1>
-        <h2><?= $product->price() ?>€</h2>
-        <p>
-        <div>Description :</div>
-        <?= $product->description() ?></p>
-        <form method="post">
-            <input id="ajoutPanier" type="submit" name="addBasket" class="addBasket" value="Ajouter au panier">
-            <input id="acheter" type="submit" name="buyProduct" class="buyProduct" value="Acheter maintenant">
-        </form>
-    </div>
+        <div class="description">
+            <h1><?= $product->name() ?></h1>
+            <?php
+                    if($array['isBasket'] && $array['messageSuccess']){ ?>
+                    <div class="alert-success">
+                        <?= $array['messageSuccess'] ?>
+                    </div>
+                <?php } ?>
+                <?php
+                    if($array['isBasket'] && $array['messageError']){ ?>
+                    <div class="alert-error">
+                        <?= $array['messageError'] ?>
+                    </div>
+    <?php } ?>
+            <h2><?= $product->price() ?>€</h2>
+            <p>
+            Description :
+            <?= $product->description() ?></p>
+            <form method="post">
+                <input id="ajoutPanier" type="submit" name="addBasket" class="addBasket" value="Ajouter au panier">
+
+                <input id="acheter" type="submit" name="buyProduct" class="buyProduct" value="Acheter maintenant">
+                <input id="wish" type="submit" name="wishlist" class="wishlist" value="Ajouter à la wishlist">
+            </form>
+        </div>
 </div>
-</div>
-<br>
+<div class="the-latest">
+            <h2 class="title-nouveautes">You may also like them !</h2>
+                <div class="nouveautes">
+                    <?php for ($i=0;$i<count($products);$i++) { ?>
+                        <a class="card" href="product.php?id=<?= $products[$i]->id() ?>">
+                            <img src="<?= $products[$i]->image() ?>" alt="produit" >
+                            <h4>
+                                <?= $products[$i]->name() ?>
+                                <strong><?= $products[$i]->price() ?> &euro;</strong>
+                            </h4>
+                        </a>
+                    <?php } ?>
+                </div>
+            </div>
+
 <?php include 'layout/footer.php'; ?>

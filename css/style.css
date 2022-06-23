@@ -16,38 +16,27 @@
  }
 
 * {
-  font-family: 'BELL';
+  font-family: 'BELL'; /*changer la police decriture*/
 }
-.title{
-  font-family: 'the Seasons';
-  width: 100%;
-  text-align: center;
-  font-size: 1,5em;
-}
-.text{
-  font-family: 'BELL';
-  font-size: 1em;
-}
+
 body {
-  background-color: #bcad9b;
+  width:100%;
+  margin: 0px;
+  padding: 0px;
   background-image:url(../images/background.png);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size:cover;
-  margin: 0 auto;
-  overflow-x: hidden;
 }
-/*-------------------BARRE D'ANNONCE-----------------------*/
+/*-------------------BARRE D'ANNONCE-----------------------
 .announcementBar {
   color: white;
   text-align: center;
   padding: 1em;
   background-color: black;
-}
-
+}*/
 /*-------------------BARRE DE NAVIGATION-----------------------*/
 .navigation {
-  background-color: rgb(14, 14, 14);
   width: 100%;
   height: 5em;
   display: flex;
@@ -56,62 +45,72 @@ body {
   z-index: 1;
 }
 #logo {
-  height: 50px;
+  margin: 1em;
+  height: 4em;
 }
-.navigation #menu {
+#menu{
+  margin: 1em;
+  height: 2em;
 }
-
 /*-------------------BANNER IMAGE-----------------------*/
 .banner {
-  width: 100%;
+  width:100%;
   text-align: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-.banner h1{
-  text-transform: uppercase;
+.banner img{
+  width:60%;
 }
-.banner h2{
-  font-family: 'Autography';
-  margin-left: 20%;
+.banner a {
+  text-align: center;
+  background-color: black;
   color: white;
+  padding: 1em;
+  font-size: 1.5em;
+  text-transform: uppercase;
 
 }
-
 /*-------------------LES POP UP-----------------------*/
 .popup {
-  background-color: #33312f;
+  background-color: #000000cf;
   width: 100%;
   text-align: center;
-  box-shadow: 0px 5px 5px;
+  box-shadow: 0px 5px 5px black;
   float: left;
   position: absolute;
   visibility: hidden;
   z-index: 2;
+  color: white;
+  text-transform: uppercase;
 }
 .popup form {
-  padding: 5px;
+  padding: 1em;
   margin: auto;
   text-align: center;
   width: 80%;
+  background-color: black;
 }
 .popup input {
-  background-color: #33312f;
+  background-color: #000000;
   border: none;
-  color: #bcad9b;
-  font-size: 20px;
+  color: #ffffff;
+  text-transform: uppercase;
 }
 .popup #search {
-  background-color: #33312f;
+  background-color: #000000;
   border: none;
-  border-bottom: solid 1px #bcad9b;
+  border-bottom: solid 1px #ffffff;
   width: 90%;
-  color: #bcad9b;
-  font-size: 20px;
-  margin-bottom: 5px;
+  color: #ffffff;
+  margin-bottom:1em;
 }
 .popup ul {
   display: inline-block;
-  margin: 30px;
-  color: #bcad9b;
+  margin: 3em;
   padding: 0px;
 }
 .popup ul li {
@@ -120,27 +119,23 @@ body {
   margin: 5px;
 }
 .popup ul li a {
-  color: #bcad9b;
+  color: #ffffff;
   text-decoration: none;
 }
 .popup ul li a:hover {
   background-color: #33312f;
-  margin-bottom: 10px;
-  border-bottom: solid #bcad9b 1px;
+  margin-bottom: 1em;
+  border-bottom: solid #ffffff 1px;
 }
-
-/*-------------------LES FORMULAIRES-----------------------*/
+/*-------------------LES FORMULAIRES-----------------------
 input {
-  margin: 10px;
   border: none;
-  padding: 10px 0px 10px 0px;
-  width: 300px;
-  color: #33312f;
+  padding: 1em 0em;
+  color: #1e1e1e;
   padding: 10px;
 }
 form {
-  background-color: #33312f;
-  font-size: 18px;
+  background-color: #151515;
   box-shadow: 0px 0px 5px black;
 }
 .submit {
@@ -148,168 +143,210 @@ form {
   font-size: large;
   background-color: #d3c2af;
   text-transform: uppercase;
-  padding-left: 20px;
 }
 .submit:hover {
   background-color: #ffebd5;
-  transition: 0.5s;
-}
-
-/*-------------------LES CARTES PRODUIT-----------------------*/
-.card {
-  color:#33312f;
-  display: inline-block;
-  margin: 2px;
-  height: 20em;
-}
-.card img {
-  margin: 0px;
-  height: 80%;
-}
-.card img:hover {
-  opacity: 50%;
-  transition: 0.5s;
-}
-.card h4 {
-  font-weight: lighter;
-  text-align: left;
-  margin: 0px;
-  background-color: #ede9e4;
-  font-family: 'The Seasons';
-  padding: 5px 10px;
-}
-.card h4 strong {
-}
+  transition: 0.5s;}*/
 
 /*-------------------NOUVEAUTES-----------------------*/
+/*problème cadrage >>>>>>>>> FAIT */
+.the-latest{
+  margin-top: 0px;
+  background-color: #000000;
+  height: fit-content;
+  padding: 2em 0px;
+}
 .nouveautes{
-  
-  width: fit-content;
+  width: 100%;
   margin: 0 auto;
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.nouveautes .card img{
+  width: 100%;
+}
+.title-nouveautes{
   text-align: center;
-  margin-top: 1em;
-  margin-bottom: 1em;
-}
-.nouveautes .title{
-  background-color: #ede9e4;
-  padding: 10px 0px 10px 0px;
-}
+  padding: 0.5em;
+  margin: 0px;
+  color: white;
+  font-family: 'Autography';
+  text-transform: lowercase;
+  font-size:4em;
+  font-weight: lighter;
 
+}
 /*-------------------MOST WANTED-----------------------*/
-
 .most-wanted{
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.784);
   width: 100%;
   color: white;
-  font-size: 50px;
-  margin: 20px 0px;
-  margin-top: 100px;
-  height: 500px;
+  font-size: 3em;
+  height: 100vh;
   display: inline-block;
-
   display: flex;
   justify-content: space-around;
   align-items:center;
+  margin-bottom: 0px;
   
 }
 #most-wanted-link *{
   display:block;
+  margin-left: 1em;
 }
 #most{
   font-family: 'Autography';
 }
 #wanted {
   font-family: 'The Seasons';
-  margin-top: -50px;
-  margin-left: 55px;
+  margin-top: -1em;
+  margin-left: 2em;
 }
-
 #most-wanted-link a {
   color: white;
   text-decoration: none;
   border: solid thin white;
-  padding: 10px 30px;
-  font-size: 10px;
-  margin-left: 50px;
+  font-size: 0.5em;
+  padding: 0.5em;
+  text-align: center;
 
 }
 .most-wanted img{
-  height: 100%;
+  height: 60%;
 }
-
-
 /*-------------------ARTICLE-----------------------*/
 .article {
   background-color: #ede9e481;
   color: black;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  height: 10em;
-  margin: 0 auto;
+  height: 100vh;
 }
 .article .text{
   width: 40%;
-  margin: 0 auto;
-
+}
+.article .title{
+  text-align: center;
+  color: black;
+  font-family: 'Autography';
+  font-size:4em;
+  font-weight: lighter;
 }
 .article p {
+  width: 80%;
   text-align: justify;
+  margin: 0 auto;
 }
 .article img{
-  height: 80%;
+  height: 70%;
 }
-
- 
-
-
 /*------------LES BLOCS D'INFOS-------------*/
 .info-cols {
   width: 100%;
+  height: fit-content;
+  background-color: rgba(0, 0, 0, 0.784);
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2em 0em;
 }
-
 .info {
-  text-align: center;
-  margin: 20px;
-  background-color: #33312f;
-  color: white;
-  display: inline-block;
-  width: 200px;
-  padding: 20px;
-  box-shadow: 0 0 10px black;
-}
-.info img {
-  height: 50px;
-  text-align: center;
-}
-
-/*------------PAGE CATALOGUE-------------*/
-
-.categories-sidebar{
+  margin: 2em;
   text-align: center;
   background-color: black;
-  box-shadow: 0px 0px 5px;
-  width: 100px;
-  float: left;
-  
+  color: white;
+  width: 20em;
+  box-shadow: 0 0 10px black;
 }
-
+.info p {
+  margin: 2em;
+  text-align: justify;
+}
+.info img {
+  margin: 2em;
+  height: 4em;
+  text-align: center;
+}
+/*-------------------LES CARTES PRODUIT-----------------------*/
+.card {
+  width: fit-content;
+  margin: 2em 2em 0px 2em;
+  text-decoration: none;
+  box-shadow: 0px 5px 5px black ;
+  background-color: #000000;
+}
+.card img {
+  width: 100%;
+}
+.card img:hover {
+  opacity: 50%;
+  transition: 0.5s;
+}
+.card h4 {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  font-size: 1.5em;
+  padding: 0px 1em;
+  font-weight: lighter; /*regarder ce que ca donne avec uppercase*/
+}
+/*------------PAGE CATALOGUE-------------*/
+.catalog{
+  border-top: solid black 5px;
+  display: flex;
+  justify-content: space-between;
+}
+.categories-sidebar{
+  background-color: rgba(0, 0, 0, 0.911);
+  color: white;
+  text-align: center;
+  width: 20em;
+}
+.categories-sidebar h2{
+  font-family: 'Autography';
+  font-weight: lighter;
+  font-size: 3em;
+}
+.categories-sidebar ul{
+  padding: 0px;
+}
+.categories-sidebar ul li{
+  list-style-type: none;
+  margin: 2em 0px;
+}
+.categories-sidebar ul li a{
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.categories-sidebar ul li a:hover{
+  background-color: #313131;
+}
+.catalogue{
+  height: 100%;
+  padding-bottom: 3em;
+  background-color:#0000004f;
+  width: 100%;
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+}
 /*------------PAGE PRODUIT-------------*/
 .produit {
-  background-color: #d3c2af;
-  height: 400px;
-  color: white;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  max-width: 850px;
-  min-width: 850px;
-  margin-top: 1em;
-  margin-left: 15em;
+  background-color: #ffffff90;
+  height: fit-content;
+  color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.description {
-  width: 400px;
-  float: right;
-  margin-right: 20px;
+.produit img{
+  height: 35em;
+  margin: 2em 3em;
+}
+.description{
+  margin: 2em;
 }
 .produit p {
   text-align: justify;
@@ -327,56 +364,94 @@ form {
   color: #d3c2af;
   font-size: large;
 }
-#acheter {
+#acheter, #ajoutPanier, #wish {
   background-color: #bcad9b;
   color: white;
+  padding: 0.5em;
+  font-size: 2em;
+  border: none;
+  box-shadow: none;
+  width: 100%;
+  margin: 0.5em 0px;
 }
-
+#wish{
+  background-color: white;
+  color: #000000;
+}
+#ajoutPanier{
+  background-color: black;
+}
+.alert-success{
+  color: forestgreen;
+  text-align: center;
+}
 /*------------PAGE PANIER-------------*/
 .panier {
-  margin-top: 1em;
-  width: 100%;
-  text-align: center;
+}
+.full-panier{
+  display: grid;
+  grid-template-rows: auto;
+}
+.card-panier{
+  border: solid black 1px;
+  font-size: 2rem;
+  text-decoration: none;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.866);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 15rem;
+}
+.card-panier img{
+  height: 90%;
+  margin-left: 1em;
+}
+.card-panier h4{
+  width: 20%;
+}
+
+.retirer-panier{
+  box-shadow: none;
+  height: 100%;
+  border: none;
+  background-color: #bcad9b;
+  padding: 0.5em;
+  color: black;
+  font-size: 2em;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+}
+.retirer-panier-form{
+  height: 100%;
+  background-color: #bcad9b;
 }
 .empty {
-  margin: 100px;
-  color: #bcad9b;
-}
-
-/*------------FOOTER-------------*/
-footer {
-  background-color: #33312f;
-  color: #d3c2af;
   text-align: center;
-  width: 100%;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.841);
 }
-input {
-  margin: 10px;
+.total-panier{
+  background-color: black;
+  color: white;
+  height: 4em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 1em;
+  font-size: 2em;
+}
+.checkout{
+  box-shadow: none;
   border: none;
-  padding: 10px 0px 10px 0px;
-  width: 300px;
-  color: #33312f;
-  padding: 10px;
+  height: 100%;
+  padding: 0px 1em;
+  font-size: 2rem;
 }
-form {
-  background-color: #33312f;
-  font-size: 18px;
-  box-shadow: 0px 0px 5px black;
+.checkout:hover{
+  background-color: rgba(255, 255, 255, 0.684);
 }
-.submit {
-  font-weight: bold;
-  font-size: large;
-  background-color: #d3c2af;
-  text-transform: uppercase;
-  padding-left: 20px;
-}
-.submit:hover {
-  background-color: #ffebd5;
-  transition: 0.5s;
-}
-
-/*------------------------PAGE INSCRIPTION-------------------------*/
-
+/*------------------------PAGE INSCRIPTION-----------*/
 .login {
   margin: 0px;
   width: 100%;
@@ -412,9 +487,102 @@ form {
   font-size: 18px;
   box-shadow: 0px 0px 5px black;
 }
-
+/*---------------FOOTER-----------*/
+footer{
+  background-color: black;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+footer p {
+  width: 100%;
+  text-align: center;
+  color: #747474;
+  margin-bottom: 2em;
+}
+.get-in-touch{
+  background-image: url(../images/footer-contact-background.png);
+  background-size: cover;
+  width: 100%;
+  height: fit-content;
+  font-family: 'The Seasons';
+  font-size: 4em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.get-in-touch form{
+  margin-right: 3em;
+  width: fit-content;
+}
+footer label{
+  font-size: 1.5rem;
+  color: white;
+  text-align: left;
+  width: 100%;
+  margin-top: 1em;
+}
+textarea{
+  box-shadow: none;
+  font-size: 1.5rem;
+  border: none;
+  padding: 1rem;
+  margin: 1em 0px;
+  width: 90%;
+}
+.get-in-touch form input{
+  box-shadow: none;
+  font-size: 1.5rem;
+  border: none;
+  padding: 1em;
+  margin: 1em 0px;
+}
+#submit-contact{
+  width: 100%;
+  background-color: black;
+  color: white;
+}
+.get-in-touch p {
+  color: white;
+  text-transform: uppercase;
+}
+.get-in-touch p strong{
+  margin-left: 2em;
+  font-size: 4rem;
+}
+.contact{
+  margin: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.footer-info{
+  width: 100%;
+  color: #747474;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+}
+.footer-info ul{
+  border-left: solid #313131 1px;
+  padding: 3em 0px;
+  width:100%;
+}
+.footer-info ul li{
+  margin-left: 5em;
+  list-style-type: none;
+}
+footer ul li a{
+  text-decoration: none;
+  color: #747474;
+}
+footer ul li a:hover{
+  text-decoration: none;
+  color: white;
+}
 /*------------------------PAGE ADMIN-------------------------
-
 .admin {
   width: 100%;
   background-color: #33312f;
@@ -428,7 +596,6 @@ form {
   margin-top: 10px;
   padding: 10px;
 }
-
 .errors {
   color: red;
 }
@@ -444,39 +611,32 @@ form {
   padding: 20px;
   font-size: 30px;
 }
-
 .alert-success {
   border: 1px solid green;
   background-color: #dff0d8;
   color: green;
 }
-
 .alert-error {
   border: 1px solid red;
   background-color: #f2dede;
   color: red;
 }
-
 -----------------------------------Tables-----------------------------------------
 #table {
   border-collapse: collapse;
   width: 100%;
 }
-
 #table td,
 #table th {
   border: 1px solid #ddd;
   padding: 8px;
 }
-
 #table tr {
   background-color: #f2f2f2;
 }
-
 #table tr:hover {
   background-color: #ddd;
 }
-
 #table th {
   padding-top: 12px;
   padding-bottom: 12px;
@@ -484,16 +644,13 @@ form {
   background-color: #33312f;
   color: white;
 }
-
 .select-category {
   width: 70%;
 }
-
 .retirer-panier {
   background-color: red;
   color: white;
 }
-
 .sidebar {
   height: 100%;
   width: 150px;
@@ -506,39 +663,210 @@ form {
   overflow-y: auto;
   padding-left: 1em;
 }
-
 .sidebar div {
   padding: 8px;
   font-size: 24px;
   display: block;
 }
-
-.sidebar p a {
-  text-decoration: none;
-  color: white;
-}
-
-.sidebar p a:hover {
-  color: red;
-}
-
-.body-text {
-  margin-left: 200px;
-  font-size: 18px;
-}
-
 .deleteBtn{
   color: red;
   text-decoration: none;
 }
-
 .voirBtn{
   color: blue;
   text-decoration: none;
 }
-
 .editBtn{
   color: black;
   text-decoration: none;
 } 
 */
+/*------------FOOTER-------------
+footer {
+  background-color: #000000;
+  color: white;
+  width: 100%;
+  height: 2em;
+  text-align: center;
+  position: fixed;
+}
+footer p {
+}
+/*
+input {
+  margin: 10px;
+  border: none;
+  padding: 10px 0px 10px 0px;
+  width: 90%;
+  color: #33312f;
+  padding:1em;
+}
+form {
+  background-color: #33312f;
+  box-shadow: 0px 0px 5px black;
+}
+.submit {
+  font-weight: bold;
+  font-size: large;
+  background-color: #d3c2af;
+  text-transform: uppercase;
+}
+.submit:hover {
+  background-color: #ffebd5;
+  transition: 0.5s;
+}
+*/
+/* Sur tous types d'écran, quand la largeur de la fenêtre est comprise entre 600px et 1024px 
+@media all and (min-width: 600px) and (max-width: 1024px){
+
+  .banner img{
+    width:90%;
+}
+  .most-wanted{
+    height: fit-content;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+  }
+  #most{
+    margin-top: 1em;
+  }
+  .most-wanted img{
+    margin: 1em;
+    width: 90%;
+    height: auto;
+  }
+  .article {
+    flex-direction: column;
+    height: fit-content;
+  }
+  .article p{
+    text-align:justify;
+    margin: 2em;
+    min-width: 270px;
+  }
+  .artcile h2{
+    min-width: 270px
+  }
+  .article img{ 
+    max-width: 300px;
+    min-width: 270px;
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+  .nouveautes{
+    width: fit-content;
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .card{
+    margin: 1em;
+    text-decoration: none;
+  }
+  .card img {
+    margin: 0 auto;
+    height: auto;
+    width: 20em;
+  }
+}*/
+
+/* Sur tous types d'écran, quand la largeur de la fenêtre est comprise entre 320px et 600px */
+@media all and (min-width: 300px) and (max-width: 1024px){
+      /*page d'acccueil*/
+  .banner img{
+    width:90%;
+}
+  .most-wanted{
+    height: fit-content;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+  }
+  #most{
+    margin-top: 1em;
+  }
+  .most-wanted img{
+    margin: 1em;
+    width: 90%;
+    height: auto;
+  }
+  .article {
+    background-color: #ede9e481;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .article .text{
+    width: 95%;
+  }
+  .article .title{
+    text-align: center;
+    color: black;
+    font-family: 'Autography';
+    font-size:2.5em;
+    font-weight: lighter;
+  }
+  .article p {
+    width: 80%;
+    text-align: justify;
+    margin: 0 auto;
+  }
+  .article img{
+    width: 60%;
+    height: auto;
+  }
+  .nouveautes{
+    width: fit-content;
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .title-nouveautes{
+    width: 100%;
+    max-height: 240px;
+    text-align: center;
+    padding:0px;
+    margin: 0px;
+    color: white;
+    font-family: 'Autography';
+    font-size:4em;
+    font-weight: lighter;
+  }
+  .card{
+    margin: 1em;
+    text-decoration: none;
+  }
+  .card img {
+    margin: 0 auto;
+    height: auto;
+    width: 10em;
+  }
+  .info-cols{
+    flex-direction: column;
+    align-items: center;
+  } /*page d'acccueil*/
+
+  /*page catalogue*/
+  /*page catalogue*/
+
+  /*page produit*/
+  /*page produit*/
+
+  /*page admin*/
+  /*page admin*/
+
+  /*page connexion*/
+  /*page connexion*/
+
+  /*page panier*/
+  /*page panier*/
+
+  /*page compte*/
+  /*page compte*/
+
+  /*footer*/
+  /*footer*/
+  
+}

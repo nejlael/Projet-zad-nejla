@@ -36,33 +36,28 @@
         </h2>
     </div>
     <?php } ?>
-    <div class="full">
+    <div class="full-panier">
         <?php foreach ($basketsMap as $key => $value) { 
             $product = $productService->getProduct($key); ?>
-        <a href="product.php?id=<?= $product->id() ?>">
-            <div class="card">
+        <a class="card-panier" href="product.php?id=<?= $product->id() ?>">
                 <img src="<?= $product->image() ?>" alt="produit" >
-                <h4><?= $product->name() ?> <strong><?= $product->price() ?> €</strong></h4>
+                <h4><?= $product->name() ?><br><br><strong><?= $product->price() ?> €</strong></h4>
                 <h4><?= $value ?>x article(s)</h4>
-                <form method="post">
+                <form class="retirer-panier-form"  method="post">
                     <input id="productId" name="productId" type="hidden" value="<?= $product->id()  ?>">
-                    <input onclick="return confirm('Voulez-vous vraiment supprimer ces articles?')" class="retirer-panier" type="submit" name="removeBasket" value="Retirer du panier">
+                    <input onclick="return confirm('Voulez-vous vraiment supprimer ces articles?')" class="retirer-panier" type="submit" name="removeBasket" value="X">
                 </form>
-            </div>
         </a>
         <?php
             } ?>
     </div>
-    <br/>
     <?php if (count($baskets) != 0) { ?>
-    <div>
-        <form method="post">
-            <div style="color:white;">
+        <form class="total-panier" method="post">
+            <p>
                 Prix total des produits : <span><?= $sumBaskets ?> €</span>
-            </div>
-            <input type="submit" value="Acheter les produits">
+            </p>
+            <input class="checkout" type="submit" value="Acheter les produits">
         </form>
-    </div>
     <?php } ?>
 </main>
 <?php include 'layout/footer.php'; ?>

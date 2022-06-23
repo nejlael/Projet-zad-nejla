@@ -10,50 +10,46 @@
 <main class="home">
     <!---------------------BANNER IMAGE--------------------------------->
     <div class="banner">
-        <img src="./images/banner.png">
-
+        <img src="./images/bannerscript.png">
+        
         <A> shop now </A>
     </div>
 
+ <!---------------------MOST WANTED LINK--------------------------------->
 
-    <!---------------------NOUVEAUX PRODUITS--------------------------------->
-    <div class="nouveautes">
-
-        <h2 class="title">THE LATEST</h2>
-
-        <?php for ($i=0;$i<count($products);$i++) { ?>
-        <a class="card" href="product.php?id=<?= $products[$i]->id() ?>">
-     
-                <img src="<?= $products[$i]->image() ?>" alt="produit" >
-                <h4>
-                    <?= $products[$i]->name() ?>
-                    <br>
-                    <strong><?= $products[$i]->price() ?> &euro;</strong>
-                </h4>
-         
-        </a>
-        <?php } ?>
-    </div>
-
-    <!---------------------MOST WANTED LINK--------------------------------->
-
-    <div class="most-wanted">
+ <div class="most-wanted">
         <div id="most-wanted-link">
             <span id="most">The most</span>
             <span id="wanted">WANTED</span>
             <a href="catalog.php">SHOP NOW</a>
         </div>
-        <img src="./images/most-wanted.png" alt="" height="400px">
+        <img src="./images/most-wanted.png" alt="">
     </div>
 
 
+    <!---------------------NOUVEAUX PRODUITS--------------------------------->
+    <div class="the-latest">
+        <h2 class="title-nouveautes">The latest are the dopest !</h2>
+        <div class="nouveautes">
+            <?php for ($i=0;$i<count($products);$i++) { ?>
+                <a class="card" href="product.php?id=<?= $products[$i]->id() ?>">
+                    <img src="<?= $products[$i]->image() ?>" alt="produit" >
+                    <h4>
+                        <?= $products[$i]->name() ?>
+                        <strong><?= $products[$i]->price() ?> &euro;</strong>
+                    </h4>
+                </a>
+            <?php } ?>
+        </div>
+        </div>
 
-    <!---------------------ARTICLE--------------------------------->
+
+
+    <!---------------------ARTICLE--------------->
     <div class="article">
         <img src="./images/article.png">
         <div class="text">
-            <h2 class="title">Aussi bien dehors que dedans</h2>
-            </br>
+            <h2 class="title">Find your inner & outer peace</h2>
             <p>
             ipsum dolor sit amet consectetur adipisicing elit. Quidem eos nesciunt cupiditate! Saepe similique sed pariatur quae sit, atque cumque reiciendis? Molestias, dolorem. Minus odio dolore, omnis impedit odit ad. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi, vel et necessitatibus, iste cum omnis ad eligendi minus voluptatem, repellendus facere? Autem libero aspernatur placeat nostrum dolore recusandae rem veritatis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quam minus in nobis reprehenderit rerum, eum ut nemo perspiciatis fugiat qui iusto deserunt quod quas. Sapiente, temporibus? Sunt, a nobis.
             </p>
