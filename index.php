@@ -29,7 +29,7 @@
     <div class="banner">
         <img src="./images/bannerscript.png">
         
-        <A> shop now </A>
+        <A href="catalog.php"> shop now </A>
     </div>
 
  <!---------------------MOST WANTED LINK--------------------------------->

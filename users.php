@@ -1,6 +1,5 @@
 <?php
     require 'backend/config/db.php';
-    include 'layout/header.php';
     
     if (!isLogged()) {
         header('location:login.php');

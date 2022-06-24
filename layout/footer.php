@@ -34,7 +34,14 @@
         <li>Twitter</li>
     </ul>
 </div>
+<ul class="payments-method">
+    <li><img src="./images/icones/bancontact.png"></li>
+    <li><img src="./images/icones/klarna.png"></li>
+    <li><img src="./images/icones/paypal.png"></li>
+    <li><img src="./images/icones/visa.png"></li>
+</ul>
 <p>ZAD | Emerald Boutique | Nejla El Morabet</p>
+
 </footer>
 <script src="./js/jquery-3.6.0.js"></script>
 <script src="./js/script.js"></script>

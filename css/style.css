@@ -14,9 +14,13 @@
   font-family: "Book Antiqua";
   src: url("../fonts/BKANT.TTF") format("truetype");
  }
+ @font-face {
+  font-family: "Acumin";
+  src: url("../fonts/AcuminVariableConcept.otf") format("opentype");
+ }
 
 * {
-  font-family: 'BELL'; /*changer la police decriture*/
+  font-family: 'Acumin'; /*changer la police decriture*/
 }
 
 body {
@@ -48,7 +52,7 @@ body {
   margin: 1em;
   height: 4em;
 }
-#menu{
+#menuimg{
   margin: 1em;
   height: 2em;
 }
@@ -215,6 +219,12 @@ form {
   height: 60%;
 }
 /*-------------------ARTICLE-----------------------*/
+.article.kids{
+  background-color: #b77b325d;
+  padding: 1em 0px 5em 0px;
+}
+.article.kids img{
+}
 .article {
   background-color: #ede9e481;
   color: black;
@@ -230,7 +240,7 @@ form {
   text-align: center;
   color: black;
   font-family: 'Autography';
-  font-size:4em;
+  font-size:3em;
   font-weight: lighter;
 }
 .article p {
@@ -387,21 +397,26 @@ form {
 }
 /*------------PAGE PANIER-------------*/
 .panier {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .full-panier{
+  background-color: rgba(0, 0, 0, 0.556);
   display: grid;
   grid-template-rows: auto;
+  width: 100%;
+  
 }
 .card-panier{
   border: solid black 1px;
   font-size: 2rem;
   text-decoration: none;
   color: white;
-  background-color: rgba(0, 0, 0, 0.866);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 15rem;
+  height: 10rem;
 }
 .card-panier img{
   height: 90%;
@@ -417,7 +432,7 @@ form {
   border: none;
   background-color: #bcad9b;
   padding: 0.5em;
-  color: black;
+  color: rgb(255, 255, 255);
   font-size: 2em;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bolder;
@@ -428,24 +443,44 @@ form {
 }
 .empty {
   text-align: center;
+  height: 100VH;
   color: black;
-  background-color: rgba(255, 255, 255, 0.841);
+  background-color: rgba(255, 255, 255, 0.358);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.empty h2{
+  width: 40%;
+  font-family: 'Autography';
+  font-size: 5em;
+  font-weight: lighter;
+}
+.empty h2 a{
+  color: black;
+  font-family: 'Acumin';
+  font-weight: lighter;
+  font-size: 2rem;
+}
+.empty img{
+  height: 40%;
+  margin: 3em;
 }
 .total-panier{
   background-color: black;
+  width: 100%;
   color: white;
-  height: 4em;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: start;
   align-items: center;
-  padding-left: 1em;
   font-size: 2em;
 }
 .checkout{
   box-shadow: none;
   border: none;
-  height: 100%;
-  padding: 0px 1em;
+  width: 100%;
+  padding: 1em 0px;
   font-size: 2rem;
 }
 .checkout:hover{
@@ -456,18 +491,41 @@ form {
   margin: 0px;
   width: 100%;
   text-align: center;
-  background-color: #33312f;
+  background-color: #232323df;
+}
+.login input{
+  box-shadow: none;
+  border: none;
+  color: #313131;
+  padding: 1em;
+  margin-top: 1em;
+}
+#submit-connexion{
+  background-color: black;
+  width: 100%;
+  color: white;
+  margin: 0px;
+  font-size: 1.5em;
+  text-transform: uppercase;
+}
+#submit-inscription{
+  background-color: black;
+  width: 100%;
+  color: white;
+  margin: 0px;
+  font-size: 1.5em;
+  text-transform: uppercase;
 }
 #btnconnexion,
 #btninscription {
-  margin: 10px;
   font-weight: bold;
   font-size: large;
   text-transform: uppercase;
-  background-color: #33312f;
+  background-color: #000000;
   color: #bcad9b;
   border: none;
-  padding: 10px;
+  width: 50%;
+  padding: 1em;
 }
 #btnconnexion:hover,
 #btninscription:hover {
@@ -477,15 +535,26 @@ form {
 }
 .switch {
   margin: 0 auto;
+  padding:2em 0px;
   text-align: center;
+  width: 40%;
+}
+.buttons-connexion{
   width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 .switch form {
-  background-color: #33312f;
+  background-color: #272727;
   margin: auto;
-  width: 350px;
-  font-size: 18px;
+  width: 100%;
   box-shadow: 0px 0px 5px black;
+}
+.avantages{
+  font-family:'Autography';
+  color:white;
+  font-size: 4em;
+  font-weight: lighter;
 }
 /*---------------FOOTER-----------*/
 footer{
@@ -547,8 +616,12 @@ textarea{
 .get-in-touch p {
   color: white;
   text-transform: uppercase;
+
+  font-family: 'The Seasons';
 }
 .get-in-touch p strong{
+  
+  font-family: 'The Seasons';
   margin-left: 2em;
   font-size: 4rem;
 }
@@ -582,19 +655,55 @@ footer ul li a:hover{
   text-decoration: none;
   color: white;
 }
-/*------------------------PAGE ADMIN-------------------------
+.payments-method{
+  display: flex;
+  justify-content: center;
+}
+.payments-method ul{
+  padding: 0px;
+}
+.payments-method li{
+  margin: 0.5em;
+}
+.payments-method li img{
+  height: 2.5em;
+  width: auto;
+}
+.admin-footer{
+  height: fit-content;
+  width: 100%;
+}
+/*------------------------PAGE ADMIN-------------------------*/
 .admin {
   width: 100%;
-  background-color: #33312f;
+  height: fit-content;
+  background-color: #151515;
   text-align: center;
-  margin-top: -10px;
-  padding-top: 20px;
+  margin-top: -10em;
+  padding-top: 15em;
+  font-size: 1rem;
+  color: white;
+}
+.admin a{
+  color: white;
+  text-decoration: none;
+}
+.admin ul{
+  padding: 0px;
+}
+.admin ul li {
+  margin: 1em;
+  list-style-type: none;
+}
+.admin a:hover{
+  text-decoration: underline;
 }
 .admin h3 {
   color: #bcad9b;
   text-align: left;
-  margin-top: 10px;
   padding: 10px;
+  background-color: #000000;
+  width: 100% ;
 }
 .errors {
   color: red;
@@ -621,7 +730,7 @@ footer ul li a:hover{
   background-color: #f2dede;
   color: red;
 }
------------------------------------Tables-----------------------------------------
+/*-----------------------------------Tables-----------------------------------------
 #table {
   border-collapse: collapse;
   width: 100%;
@@ -681,41 +790,7 @@ footer ul li a:hover{
   text-decoration: none;
 } 
 */
-/*------------FOOTER-------------
-footer {
-  background-color: #000000;
-  color: white;
-  width: 100%;
-  height: 2em;
-  text-align: center;
-  position: fixed;
-}
-footer p {
-}
-/*
-input {
-  margin: 10px;
-  border: none;
-  padding: 10px 0px 10px 0px;
-  width: 90%;
-  color: #33312f;
-  padding:1em;
-}
-form {
-  background-color: #33312f;
-  box-shadow: 0px 0px 5px black;
-}
-.submit {
-  font-weight: bold;
-  font-size: large;
-  background-color: #d3c2af;
-  text-transform: uppercase;
-}
-.submit:hover {
-  background-color: #ffebd5;
-  transition: 0.5s;
-}
-*/
+
 /* Sur tous types d'écran, quand la largeur de la fenêtre est comprise entre 600px et 1024px 
 @media all and (min-width: 600px) and (max-width: 1024px){
 
@@ -776,6 +851,20 @@ form {
   .banner img{
     width:90%;
 }
+.popup{
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.popup ul{
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+}
+.popup form{
+  margin-top: 0px;
+}
   .most-wanted{
     height: fit-content;
    flex-direction: column;
@@ -801,6 +890,7 @@ form {
   }
   .article .text{
     width: 95%;
+    margin-bottom: 2em;
   }
   .article .title{
     text-align: center;
@@ -810,12 +900,12 @@ form {
     font-weight: lighter;
   }
   .article p {
-    width: 80%;
+    width: 90%;
     text-align: justify;
     margin: 0 auto;
   }
   .article img{
-    width: 60%;
+    width: 80%;
     height: auto;
   }
   .nouveautes{
@@ -835,13 +925,14 @@ form {
     font-weight: lighter;
   }
   .card{
-    margin: 1em;
+    margin: 0.5em;
     text-decoration: none;
+    font-size: 1rem;
   }
   .card img {
     margin: 0 auto;
     height: auto;
-    width: 10em;
+    width: 100%;
   }
   .info-cols{
     flex-direction: column;
@@ -849,24 +940,300 @@ form {
   } /*page d'acccueil*/
 
   /*page catalogue*/
+  .catalog{
+    border-top: solid black 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .categories-sidebar{
+    background-color: rgba(0, 0, 0, 0.911);
+    color: white;
+    text-align: center;
+    width: 15em;
+    margin-top: 0px;
+  }
+  .categories-sidebar h2{
+    font-family: 'Autography';
+    font-weight: lighter;
+    font-size: 2em;
+  }
+  .catalogue{
+    height: 100%;
+    padding-bottom: 3em;
+    background-color:#0000004f;
+    width: 100%;
+    display:grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin-top: 0px;
+  }
   /*page catalogue*/
 
   /*page produit*/
+  .produit {
+    border-top: solid black 20px;
+    background-color: #ffffff90;
+    height: fit-content;
+    color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .produit img{
+    height: auto;
+    width: 90%;
+    margin: 2em 3em;
+  }
+  .description{
+    margin: 2em;
+  }
+  .produit p {
+    text-align: justify;
+    padding-right: 20px;
+  }
+  .produit h1 {
+    font-weight: lighter;
+  }
+  .produit button {
+    padding: 10px;
+    border-radius: 50px;
+    border: none;
+    margin: 10px 0px 10px 0px;
+    width: 250px;
+    color: #d3c2af;
+    font-size: large;
+  }
+  #acheter, #ajoutPanier, #wish {
+    background-color: #bcad9b;
+    color: white;
+    padding: 0.5em;
+    font-size: 2em;
+    border: none;
+    box-shadow: none;
+    width: 100%;
+    margin: 0.5em 0px;
+  }
+  #wish{
+    background-color: white;
+    color: #000000;
+  }
+  #ajoutPanier{
+    background-color: black;
+  }
+  .alert-success{
+    color: forestgreen;
+    text-align: center;
+  }
   /*page produit*/
 
   /*page admin*/
   /*page admin*/
 
   /*page connexion*/
+  .login {
+    margin: 0px;
+    width: 100%;
+    text-align: center;
+    background-color: #232323df;
+  }
+  .login input{
+    box-shadow: none;
+    border: none;
+    color: #313131;
+    padding: 1em;
+    margin-top: 1em;
+  }
+  #submit-connexion{
+    background-color: black;
+    width: 100%;
+    color: white;
+    margin: 0px;
+    font-size: 1.5em;
+    text-transform: uppercase;
+  }
+  #submit-inscription{
+    background-color: black;
+    width: 100%;
+    color: white;
+    margin: 0px;
+    font-size: 1.5em;
+    text-transform: uppercase;
+  }
+  #btnconnexion,
+  #btninscription {
+    font-weight: bold;
+    font-size: large;
+    text-transform: uppercase;
+    background-color: #000000;
+    color: #bcad9b;
+    border: none;
+    width: 50%;
+    padding: 1em;
+  }
+  #btnconnexion:hover,
+  #btninscription:hover {
+    background-color: #bcad9b;
+    color: #33312f;
+    transition: 0.5s;
+  }
+  .switch {
+    margin: 0 auto;
+    padding:0px;
+    text-align: center;
+    width: 100%;
+  }
+  .buttons-connexion{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .switch form {
+    background-color: #151515;
+    margin: auto;
+    width: 100%;
+    box-shadow: 0px 0px 5px black;
+  }
   /*page connexion*/
 
   /*page panier*/
+  .panier {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-top: solid black 20px;
+  }
+  .full-panier{
+    background-color: rgba(0, 0, 0, 0.556);
+    display: grid;
+    grid-template-rows: auto;
+    width: 100%;
+    
+  }
+  .card-panier{
+    border: solid black 1px;
+    font-size: 2rem;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: fit-content;
+  }
+  .card-panier img{
+    height:auto;
+    width: 80%;
+    margin-left: 0px;
+  }
+  .card-panier h4{
+    width: 100%;
+    text-align: center;
+  }
+  
+  .retirer-panier{
+    box-shadow: none;
+    height: 100%;
+    width: 100%;
+    border: none;
+    background-color: #bcad9b;
+    padding: 0.5em;
+    color: rgb(255, 255, 255);
+    font-size: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+  }
+  .retirer-panier-form{
+    height: 100%;
+    width: 100%;
+    background-color: #bcad9b;
+  }
+  .empty {
+    text-align: center;
+    height: fit-content;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.358);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .empty h2{
+    width: 100%;
+    font-family: 'Autography';
+    font-size: 3em;
+    font-weight: lighter;
+  }
+  .empty h2 a{
+    color: black;
+    font-family: 'Acumin';
+    font-weight: lighter;
+    font-size: 1rem;
+  }
+  .empty img{
+    height: auto;
+    width: 70%;
+    margin: 3em;
+  }
+  .total-panier{
+    background-color: black;
+    width: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    font-size: 2em;
+  }
+  .checkout{
+    box-shadow: none;
+    border: none;
+    width: 100%;
+    padding: 1em 0px;
+    font-size: 2rem;
+  }
+  .checkout:hover{
+    background-color: rgba(255, 255, 255, 0.684);
+  }
   /*page panier*/
 
   /*page compte*/
+
   /*page compte*/
 
   /*footer*/
+  .get-in-touch{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .get-in-touch p,{
+    font-size: 2rem;
+  }
+  .get-in-touch p strong{
+    font-size: 2rem;
+  }
+  .footer-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer-info ul{
+    border-left: none;
+    border-bottom: solid #313131 1px;
+    text-align: center;
+    width: 100%;
+  }
+  .footer-info ul li {
+    margin: 0px;
+  }
+  .get-in-touch form{
+    margin: 0px;
+  }
+  ul{
+    padding: 0px;
+  }
   /*footer*/
   
 }
