@@ -22,7 +22,7 @@
             <!-------------------barre de navigation----------------------->
             <div class="navigation">
                 <a href="index.php" ><img  id="logo" src="./images/icones/logo_emerald.png" alt="logo" height="60px"></a>
-                <img id="menu" src="./images/icones/menu.png" alt="menu">
+                <img id="menuimg" src="./images/icones/menu.png" alt="menu">
             </div>
             <!-------------------POP UP MENU----------------------->
             <div class="popup">

@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    const menu = document.querySelector('#menu');
+    const menu = document.querySelector('#menuimg');
     const popup = document.querySelector('.popup');
     //décalaration des variables pour le menu
     //déclaration des variables pour l'inscription et connexion

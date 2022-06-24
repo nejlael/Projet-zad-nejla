@@ -118,8 +118,11 @@
     
     ?>
 <main class="login">
-    <div class="switch"><button id="btninscription">Inscription</button>
-    <button id="btnconnexion">Connexion</button>
+    <div class="switch">
+        <Div class="buttons-connexion">
+            <button id="btninscription">Inscription</button>
+            <button id="btnconnexion">Connexion</button>
+        </Div>
         <div class="connexion">
             <form method="post">
                 <?php
@@ -140,7 +143,7 @@
                 <input type="password" name="password" placeholder="Entrez votre mot de passe">
                 <div><small class="errors"><?= $array['isLogin'] ? $array['passwordError'] : ''?></small></div>
                 <br>
-                <input type="submit" name="submitLogin" class="submit" value="Se connecter">
+                <input id="submit-connexion" type="submit" name="submitLogin" class="submit" value="Se connecter">
             </form>
         </div>
         
@@ -171,22 +174,25 @@
                 <input type="password" name="password" placeholder="choisissez un mot de passe">
                 <div><small class="errors"><?= $array['isRegister'] ? $array['passwordError'] : ''?></small></div>
                 <br>
-                <input type="submit" name="submitRegister" class="submit" value="S'inscrire">
+                <input id="submit-inscription"  type="submit" name="submitRegister" class="submit" value="S'inscrire">
             </form>
         </div>
     </div>
     <div class="info-cols">
+        <h2 class="avantages">Vos avantages</h2>
         <div class="info">
-            <img src="./images/icones/icones_cadeau.png" alt="cadeau">
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis sint corrupti cumque tenetur quod, ab voluptas porro natus officia, aspernatur mollitia adipisci nesciunt beatae totam nisi tempora voluptatum, assumenda doloribus.</p>
+            <img src="./images/icones/birthday.png" alt="cadeau">
+            <p>C'est votre anniversaire ? et vous êtes inscrit chez nous ? Alors c'est votre jour de chance ! Les anniversaires, ça n'arrive qu'une fois dans l'année, alors nous voulons que ce jour soit spécial ! Nous nous engageons à ne jamais vous oublier et à vous offrir une petite surpise différente chaque année !
+                Alors, qu'attendez vous ? Inscrivez-vous vite !
+            </p>
         </div>
         <div class="info">
-            <img src="./images/icones/icones_Livraison.png" alt="livraison">
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis sint corrupti cumque tenetur quod, ab voluptas porro natus officia, aspernatur mollitia adipisci nesciunt beatae totam nisi tempora voluptatum, assumenda doloribus.</p>
+            <img src="./images/icones/target.png" alt="livraison">
+            <p>C'est toujours mieux quand vous n'êtes pas encombré par des publicités qui ne vous interesse pas, n'est ce pas ? Vous souhaiteriez peut-être des suggestions sur mesure rien que pour vous, et vous le méritez ! Pour ce faire, inscrivez-vous et nous nous chargeons du reste !</p>
         </div>
         <div class="info">
-            <img src="./images/icones/icones_SAV.png" alt="SAV">
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis sint corrupti cumque tenetur quod, ab voluptas porro natus officia, aspernatur mollitia adipisci nesciunt beatae totam nisi tempora voluptatum, assumenda doloribus.</p>
+            <img src="./images/icones/mail.jpg" alt="SAV">
+            <p>Parce que nous aimons être proche de nos clients et que nous voulons lui offrir le meilleur service, nous avons mis en place une newsletter dans la quelle vous trouverez plein d'astuces et de cadeaux ! Vous n'allez quand meme pas manquer ça ? Inscrivez vous pour recevoir votre tout premier avantage !</p>
         </div>
     </div>
 </main>

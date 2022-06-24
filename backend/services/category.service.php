@@ -45,6 +45,7 @@ class CategoryService {
 		}
 		return null;
 	}
+	
 
 	public function deleteCategory($categoryId){
 		$query = 'DELETE FROM categories WHERE id="'.$categoryId . '"';

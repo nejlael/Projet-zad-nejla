@@ -1,12 +1,14 @@
 <?php
     require 'backend/config/db.php';
     
+    include 'layout/header.php';
+    
+    
+    require 'backend/models/user.class.php';
+    require 'backend/services/user.service.php';
     if (!isLogged()) {
         header('location:login.php');
     }
-    require 'backend/models/user.class.php';
-    require 'backend/services/user.service.php';
-    
     $userService = new UserService();
     $users = $userService->getUsers();
     ?>

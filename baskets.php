@@ -38,7 +38,8 @@
     <!----------------------SI UN ARTICLE DANS LE PANIER CACHER CETTE DIV----------------------------->
     <?php if (count($baskets) == 0) { ?>
     <div class="empty" >
-        <h2>Votre panier est vide<br>
+        <img src="./images/icones/birds.png">
+        <h2>C'est vide par ici...<br>
             <a href="catalog.php">Continuer mes achats</a>
         </h2>
     </div>

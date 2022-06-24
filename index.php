@@ -60,7 +60,20 @@
         </div>
         </div>
 
-
+<!---------------------ARTICLE--------------->
+<div class="article kids">
+        <div class="text">
+            <h2 class="title">A classy decoration.<br>For kids too !</h2>
+            <p>
+            Le saviez-vous ? de nombreuses études ont démontré que les couleurs avaient un impact sur les émotions et que les enfants y sont globalement plus sensibles!<br>
+            Nous avons les couleur neutres et naturelles qui développe la confiance et la sécurité, l'enfant en à besoin pour se sentir rassuré et serein. Les couleurs qui aideront à atteindre cet etat d'esprit sont le gris, les tons sienne ocre et marron , le blanc et le noir.<br>
+            Ensuite , il y a les couleur qui favorisent la joie et l'optimisme. Le jaune , le vert et le bleu-vert ont un effet positif sur la concentration dans l'apprentissage au delà de la bonne humeur!<br>
+            Pour reduire le stress, l'anxieté et les inhibitions, les tons bleu froid et de violet vifs permettent de creer une atmosphère paisible, propice au lâcher prise. Le bleu apporte calme de douceur et le violet permet de s'ouvrir à la créativité.<br>
+            Le rouge, couleur flamboyante, très dynamique, elle ne passe pas inaperçue et est a utilisé avec prudence car peut générer des émotiosn fortes de colères, voir d'agressivité. Bien employée elle peut être un atout dans un espace dédié au jeu.
+            </p>
+        </div>
+        <img src="./images/kids.png">
+    </div>
 
     <!---------------------ARTICLE--------------->
     <div class="article">

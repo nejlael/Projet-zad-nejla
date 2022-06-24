@@ -3,9 +3,9 @@
 <span class="get-in-touch">
     <p>Let's get <br><strong>in touch</strong></p>
     <form class="contact">
-        <input type="email" name="email-contact" placeholder="Entrez votre adresse e-mail">
+        <input type="email" name="messageEmail" placeholder="Entrez votre adresse e-mail">
 
-        <input type="text" name="firstname-contact" placeholder="Entrez votre prénom">
+        <input type="text" name="messageFirstname" placeholder="Entrez votre prénom">
         <label for="message">Ecrivez votre message...</label>
         <textarea id="message" name="message" rows="5">
         </textarea>
